@@ -6,23 +6,36 @@ public class BubbleSort
 {
 	public static void main(String []args)
 	{
-		int a[]= {12,2,3,5,4,7,9,10,8};
-		System.out.println("Array before shorting :- "+Arrays.toString(a));
-		
-		int n=a.length;
-		System.out.println();
-		
-		for(int i=0; i<n-1; i++)
+		int a[]= {2,5,3,1,6,8,0,9};
+
+		for(int i=0; i<a.length; i++)
 		{
-			for(int j=0; j<n-1; j++)
+			for(int j=0; j<a.length-1-i; j++)
 			{
-				if(a[j]>a[j+i])
+				if(a[j]>a[j+1])
 				{
 					int temp=a[j];
-					a[j]=a[i];
-					a[i]=temp;
+					a[j]=a[j+1];
+					a[j+1]=temp;
 				}
 			}
-		}System.out.println("After shorting :- "+Arrays.toString(a));
+		}
+		System.out.println(Arrays.toString(a));
+
+//		int a[]= {1,2,5,8,6,3,4,0,7};
+//
+//		for(int i=0 ; i<a.length; i++)	
+//		{
+//			for(int j=0; j<a.length-1; j++)
+//			{
+//				if(a[j]>a[j+1])
+//				{
+//					int temp=a[j];
+//					a[j]=a[j+1];
+//					a[j+1]=temp;
+//				}
+//			}
+//		}System.out.println(Arrays.toString(a));
+
 	}
 }

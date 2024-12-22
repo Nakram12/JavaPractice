@@ -11,7 +11,9 @@ public class SumOfNum {
 		while(num>0)
 		{
 			sum=sum+num%10;
+		
 			num=num/10;
+			
 		}
 		System.out.println("Total Sum of digit is :- "+sum);
 	}

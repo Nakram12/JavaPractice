@@ -16,29 +16,19 @@ public class ArrayPrograms
 		//System.out.println(Arrays.toString(a));
 		// with you using any inbuilt methods
 
-
-		public  void () {
-			for (int i = 0; i < a.length-1; i++) 
+		for (int i = 0; i < a.length-1; i++) 
+		{
+			for(int j=0; i<a.length-1-i; i++)
 			{
-				for(int j=i+1; i<a.length; i++)
+				if(a[j]> a[j+1])
 				{
-					if(a[i]< a[j])
-					{
-						int temp = a[i];
-						a[i] = a[j];
-						a[j] = a[i];
-						a[i] = temp;
-
-					}
+					int temp = a[j];
+					a[j] = a[j+1];
+					a[j+1] = temp;
+					//a[i] = temp;
 				}
-
 			}
-
-
-
-
-
-		}
-
+		}System.out.println(Arrays.toString(a));
+		
 	}
 }
